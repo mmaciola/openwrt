@@ -2162,6 +2162,16 @@ define Device/thunder_timecloud
 endef
 TARGET_DEVICES += thunder_timecloud
 
+define Device/totolink_a6000r
+  $(Device/dsa-migration)
+  IMAGE_SIZE := 16064k
+  UIMAGE_NAME := C8340R1C-9999
+  DEVICE_VENDOR := TOTOLINK
+  DEVICE_MODEL := A6000R
+  DEVICE_PACKAGES := kmod-mt7615-firmware -uboot-envtools
+endef
+TARGET_DEVICES += totolink_a6000r
+
 define Device/totolink_a7000r
   $(Device/dsa-migration)
   IMAGE_SIZE := 16064k
